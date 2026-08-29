@@ -60,7 +60,6 @@
 
   services.flatpak.enable = true;
 
-  networking.networkmanager.enable = true;
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -82,7 +81,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.danu = {
     isNormalUser = true;
-    extraGroups = [ "wheel", "networkmanager ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];
